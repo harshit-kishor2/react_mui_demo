@@ -1,15 +1,14 @@
-import { useEffect, useState } from 'react'
-import { Outlet } from 'react-router-dom'
-
 // material-ui
+import { Box, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
-import { Box, Toolbar, useMediaQuery } from '@mui/material'
+import EmptyLayout from './EmptyLayout'
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
-const MainLayout = (props: any) => {
+const UserLayout = () => {
   const theme = useTheme()
-  const matchDownLG = useMediaQuery(theme.breakpoints.down('xl'))
+  const matchDownLG = useMediaQuery(theme.breakpoints.down('sm'))
+  console.log('matchDownLG', matchDownLG)
 
   return (
     <Box
@@ -26,7 +25,7 @@ const MainLayout = (props: any) => {
         component='main'
         sx={{ width: '100%', flexGrow: 1, p: { xs: 5, sm: 5 } }}
       >
-        <Toolbar />
+        {/* <Toolbar /> */}
         {/* <Breadcrumbs
           navigation={navigation}
           title
@@ -34,10 +33,10 @@ const MainLayout = (props: any) => {
           card={false}
           divider={false}
         /> */}
-        <Outlet />
+        <EmptyLayout />
       </Box>
     </Box>
   )
 }
 
-export default MainLayout
+export default UserLayout

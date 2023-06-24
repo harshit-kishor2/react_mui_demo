@@ -1,21 +1,19 @@
-import React, { FC } from 'react'
+import GetAllRoutes from 'navigation'
+import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
-import { ThemeModeProvider } from '../contexts/themeContext/ThemeModeProvider'
-import ThemeCustomization from '../themes'
-import ThemeRoutes from 'navigation'
+import RootContextProvider from './RootContextProvider'
+import ThemeCustomization from './ThemeCostomization'
 
-interface Props {}
-
-const App: FC<Props> = () => {
+const App: FC = () => {
   return (
     <>
-      <ThemeModeProvider>
+      <RootContextProvider>
         <ThemeCustomization>
           <BrowserRouter>
-            <ThemeRoutes />
+            <GetAllRoutes />
           </BrowserRouter>
         </ThemeCustomization>
-      </ThemeModeProvider>
+      </RootContextProvider>
     </>
   )
 }

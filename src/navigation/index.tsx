@@ -1,19 +1,10 @@
+import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import routes from './routes'
-import React, { useEffect } from 'react'
 
-// ==============================|| ROUTING RENDER ||============================== //
-
-const ThemeRoutes = (props: any) => {
-  let userDetails = false
-  //   useEffect(() => {
-  //     stayLogin()
-  //     getCountryCode()
-  //   }, [])
-
-  //   const userDetails = LocalStorage.getItem(LocalStorage.keys.USER_DETAILS)
-
-  const routing = useRoutes(routes(userDetails))
+const GetAllRoutes = () => {
+  const routing = useRoutes(routes)
   return <>{routing}</>
 }
-export default ThemeRoutes
+
+export default GetAllRoutes
