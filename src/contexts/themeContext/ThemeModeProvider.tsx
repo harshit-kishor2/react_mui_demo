@@ -17,7 +17,7 @@ interface Props {
 // step1- Create context
 const ThemeModeContext = createContext<IThemeModeContext | null>(null)
 
-// step-2 Create Provider
+// step-2 Create Provider (for Wrapping component that can access it)
 export const ThemeModeProvider = ({ children, ...props }: Props) => {
   const [mode, setMode] = useState<string>('light')
   const contextValue: IThemeModeContext = {

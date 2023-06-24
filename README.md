@@ -50,8 +50,16 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 1. Add Material UI
 
    yarn add @mui/material @emotion/react @emotion/styled
-
    yarn add @mui/icons-material
 
 2. Add Router Dom
-    yarn add react-router-dom
+   yarn add react-router-dom
+
+3. Add Simple bar dependency
+   yarn add react-pro-sidebar
+
+4. For form handling
+   yarn add react-hook-form
+
+5. Add Extra helper dependency
+   yarn add lodash dayjs
