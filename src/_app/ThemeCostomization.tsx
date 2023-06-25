@@ -4,9 +4,9 @@ import { ReactNode } from 'react'
 import { CssBaseline, StyledEngineProvider } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
 
-import { useThemeModeContext } from '@contexts/themeContext/ThemeModeProvider'
 import { themeSettings } from 'src/themes/theme'
 import ComponentsOverrides from 'src/themes/overrides'
+import { useThemeModeContext } from 'src/contexts/themeContext/ThemeModeProvider'
 
 interface Props {
   children?: ReactNode

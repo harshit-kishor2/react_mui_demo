@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 
-import useBasepath, { URL_BASE_PATH } from '@hooks/useBasepath'
-import GetAllRoutes from '@navigations'
 import RootContextProvider from './RootContextProvider'
 import ThemeCustomization from './ThemeCostomization'
+import GetAllRoutes from 'src/navigation'
+import useBasepath, { URL_BASE_PATH } from 'src/hooks/useBasepath'
 
 const App: FC = () => {
   // Replace Base path in url

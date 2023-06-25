@@ -1,6 +1,6 @@
-import { AuthProvider } from '@contexts/authContext/AuthProvider'
-import { ThemeModeProvider } from '@contexts/themeContext/ThemeModeProvider'
 import { ReactNode } from 'react'
+import { AuthProvider } from 'src/contexts/authContext/AuthProvider'
+import { ThemeModeProvider } from 'src/contexts/themeContext/ThemeModeProvider'
 
 interface Props {
   children?: ReactNode

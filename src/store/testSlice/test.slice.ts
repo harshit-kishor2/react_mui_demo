@@ -1,7 +1,7 @@
-import { LoadingStatus } from '@helpers/strings'
 import { createSlice } from '@reduxjs/toolkit'
 import { initialState } from './types'
 import { apiAction } from './actions'
+import { LoadingStatus } from 'src/helpers/strings'
 
 // =============================== Redux : Test Slice ==================================
 

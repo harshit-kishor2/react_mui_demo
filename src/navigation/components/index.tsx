@@ -1,5 +1,5 @@
-import { useAuthContext } from '@contexts/authContext/AuthProvider'
 import { Navigate, Outlet } from 'react-router-dom'
+import { useAuthContext } from 'src/contexts/authContext/AuthProvider'
 
 type PrivateRouteType = {
   roleRequired?: 'ADMIN' | 'USER'
@@ -24,7 +24,7 @@ export const PublicRoutes = () => {
 export const PrivateRoutes = (props: PrivateRouteType) => {
   // const { isLoggedIn } = useAuth()
 
-  return props.roleRequired == USER_TYPE ? (
+  return props.roleRequired === USER_TYPE ? (
     <Outlet />
   ) : (
     <Navigate to='/denied' />

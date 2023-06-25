@@ -2,21 +2,21 @@ import { lazy } from 'react'
 import { Navigate, RouteObject } from 'react-router-dom'
 import MainLayout from './layout/MainLayout'
 
-import { Loadable } from '@components'
 import {
   NavigateToDashboard,
   PrivateRoutes,
   ProtectedRoute,
   PublicRoutes,
 } from './components'
+import { Loadable } from 'src/components'
 
-const LoginPage = Loadable(lazy(() => import('@screens/LoginPage')))
+const LoginPage = Loadable(lazy(() => import('src/screens/LoginPage')))
 
-const Homepage = Loadable(lazy(() => import('@screens/Homepage')))
+const Homepage = Loadable(lazy(() => import('src/screens/Homepage')))
 
-const SamplePage = Loadable(lazy(() => import('@screens/SamplePage')))
-const DeniedPage = Loadable(lazy(() => import('@screens/DeniedPage')))
-const NotFoundPage = Loadable(lazy(() => import('@screens/NotFoundPage')))
+const SamplePage = Loadable(lazy(() => import('src/screens/SamplePage')))
+const DeniedPage = Loadable(lazy(() => import('src/screens/DeniedPage')))
+const NotFoundPage = Loadable(lazy(() => import('src/screens/NotFoundPage')))
 
 const routes: RouteObject[] = [
   // Will be accessed from Logged in Users

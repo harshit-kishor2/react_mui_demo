@@ -1,5 +1,5 @@
-import { LoadingStatus } from '@helpers/strings'
-import { LoadingStatusType, UserDetailsType } from '@types'
+import { LoadingStatus } from 'src/helpers/strings'
+import { LoadingStatusType, UserDetailsType } from 'src/types'
 
 // Define interface of initial state
 export interface TestInitialStateType {

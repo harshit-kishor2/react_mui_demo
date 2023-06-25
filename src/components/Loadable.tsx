@@ -1,5 +1,5 @@
 import { FC, Suspense } from 'react'
-import { Loader } from '@components'
+import Loader from './Loader'
 
 // project import
 
