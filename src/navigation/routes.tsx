@@ -1,28 +1,64 @@
 import Loadable from 'components/Loadable'
 
 import { lazy } from 'react'
-import { Navigate } from 'react-router-dom'
-import PrivateRoutes from './PrivateRoutes'
-import PublicRoutes from './PublicRoutes'
+import { Navigate, RouteObject } from 'react-router-dom'
+import MainLayout from './layout/MainLayout'
+import {
+  NavigateToDashboard,
+  PrivateRoutes,
+  ProtectedRoute,
+  PublicRoutes,
+} from 'navigation/components'
 
 const LoginPage = Loadable(lazy(() => import('screens/LoginPage')))
 
 const Homepage = Loadable(lazy(() => import('screens/Homepage')))
 
 const SamplePage = Loadable(lazy(() => import('screens/SamplePage')))
+const DeniedPage = Loadable(lazy(() => import('screens/DeniedPage')))
+const NotFoundPage = Loadable(lazy(() => import('screens/NotFoundPage')))
 
-const routes = [
+const routes: RouteObject[] = [
+  // Will be accessed from Logged in Users
   {
     path: '/',
     element: <PrivateRoutes />,
     children: [
-      { path: '/', element: <Navigate to='/dashboard' /> },
-      // Dashboard
-      { path: '/dashboard', element: <Homepage /> },
-      { path: '/sample-page', element: <SamplePage /> },
-      { path: '*', element: <Navigate to='/' replace /> },
+      {
+        path: '/',
+        element: <MainLayout />, // Render layout based on logged in user (join drawer and app bar)
+        children: [
+          { path: '/', element: <NavigateToDashboard /> },
+
+          // Can access only admin
+          {
+            path: '/admin',
+            element: <ProtectedRoute roleRequired='ADMIN' />,
+            children: [
+              { path: '/admin/dashboard', element: <Homepage /> },
+              // { path: '/dashboard', element: <Homepage /> },
+            ],
+          },
+
+          // Can access only user
+          {
+            path: '/user',
+            element: <ProtectedRoute roleRequired='USER' />,
+            children: [
+              { path: '/user/dashboard', element: <Homepage /> },
+              // { path: '/dashboard', element: <Homepage /> },
+            ],
+          },
+
+          // Can access by any logged in user
+          { path: '/sample-page', element: <SamplePage /> },
+        ],
+      },
+      { path: '*', element: <Navigate to='/not-found' replace /> },
     ],
   },
+
+  // Will be accessed from Logged out Users
   {
     path: '/',
     element: <PublicRoutes />,
@@ -32,6 +68,10 @@ const routes = [
       { path: '/', element: <Navigate to='/login' /> },
     ],
   },
+
+  // Will be accessed from any users
+  { path: '/denied', element: <DeniedPage /> },
+  { path: '/not-found', element: <NotFoundPage /> },
 ]
 
 export default routes

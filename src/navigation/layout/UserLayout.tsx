@@ -1,7 +1,7 @@
 // material-ui
 import { Box, useMediaQuery } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
-import EmptyLayout from './EmptyLayout'
+import { Outlet } from 'react-router-dom'
 
 // ==============================|| MAIN LAYOUT ||============================== //
 
@@ -33,7 +33,7 @@ const UserLayout = () => {
           card={false}
           divider={false}
         /> */}
-        <EmptyLayout />
+        <Outlet />
       </Box>
     </Box>
   )
