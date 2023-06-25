@@ -1,27 +1,27 @@
-import useAuth from 'hooks/useAuth'
+import { useAuthContext } from 'contexts/authContext/AuthProvider'
 import { Navigate, Outlet } from 'react-router-dom'
 
-type ProtectedRouteType = {
+type PrivateRouteType = {
   roleRequired?: 'ADMIN' | 'USER'
 }
 const USER_TYPE = 'USER'
 
 //! Private Routes
-export const PrivateRoutes = () => {
-  const { isLoggedIn } = useAuth()
+export const ProtectedRoute = () => {
+  const { isLoggedIn } = useAuthContext()
 
   return isLoggedIn ? <Outlet /> : <Navigate to='/login' />
 }
 
 //! Public Routes
 export const PublicRoutes = () => {
-  const { isLoggedIn } = useAuth()
+  const { isLoggedIn } = useAuthContext()
 
   return isLoggedIn ? <Navigate to='/dashboard' /> : <Outlet />
 }
 
 //! Protected Routes
-export const ProtectedRoute = (props: ProtectedRouteType) => {
+export const PrivateRoutes = (props: PrivateRouteType) => {
   // const { isLoggedIn } = useAuth()
 
   return props.roleRequired == USER_TYPE ? (

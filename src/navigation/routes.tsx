@@ -22,7 +22,7 @@ const routes: RouteObject[] = [
   // Will be accessed from Logged in Users
   {
     path: '/',
-    element: <PrivateRoutes />,
+    element: <ProtectedRoute />,
     children: [
       {
         path: '/',
@@ -33,7 +33,7 @@ const routes: RouteObject[] = [
           // Can access only admin
           {
             path: '/admin',
-            element: <ProtectedRoute roleRequired='ADMIN' />,
+            element: <PrivateRoutes roleRequired='ADMIN' />,
             children: [
               {
                 path: '/admin',
@@ -47,7 +47,7 @@ const routes: RouteObject[] = [
           // Can access only user
           {
             path: '/user',
-            element: <ProtectedRoute roleRequired='USER' />,
+            element: <PrivateRoutes roleRequired='USER' />,
             children: [
               {
                 path: '/user',

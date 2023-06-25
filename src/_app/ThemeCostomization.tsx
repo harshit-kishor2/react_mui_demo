@@ -2,9 +2,10 @@ import { ReactNode } from 'react'
 
 // material-ui
 import { CssBaseline, StyledEngineProvider } from '@mui/material'
-import { ThemeProvider } from '@mui/material/styles'
+import { ThemeProvider, createTheme } from '@mui/material/styles'
 import ComponentsOverrides from 'themes/overrides'
-import useThemeMode from 'hooks/useThemeMode'
+import { themeSettings } from 'themes/theme'
+import { useThemeModeContext } from 'contexts/themeContext/ThemeModeProvider'
 
 interface Props {
   children?: ReactNode
@@ -13,7 +14,8 @@ interface Props {
 // ==============================|| DEFAULT THEME - MAIN  ||============================== //
 
 const ThemeCustomization = ({ children }: Props) => {
-  const { themes } = useThemeMode()
+  const { mode } = useThemeModeContext()
+  const themes = createTheme(themeSettings(mode))
   themes.components = ComponentsOverrides(themes)
 
   return (

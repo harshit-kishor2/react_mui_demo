@@ -2,7 +2,7 @@
   "name": "demo-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://harshit-kishor2.github.io/react_mui_demo",
+  "homepage": "https://harshit-kishor2.github.io/react_mui_demo",
   "dependencies": {
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
