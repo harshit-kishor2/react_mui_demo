@@ -35,6 +35,10 @@ const routes: RouteObject[] = [
             path: '/admin',
             element: <ProtectedRoute roleRequired='ADMIN' />,
             children: [
+              {
+                path: '/admin',
+                element: <Navigate to='/admin/dashboard' replace />,
+              },
               { path: '/admin/dashboard', element: <Homepage /> },
               // { path: '/dashboard', element: <Homepage /> },
             ],
@@ -45,6 +49,10 @@ const routes: RouteObject[] = [
             path: '/user',
             element: <ProtectedRoute roleRequired='USER' />,
             children: [
+              {
+                path: '/user',
+                element: <Navigate to='/user/dashboard' replace />,
+              },
               { path: '/user/dashboard', element: <Homepage /> },
               // { path: '/dashboard', element: <Homepage /> },
             ],
@@ -63,9 +71,9 @@ const routes: RouteObject[] = [
     path: '/',
     element: <PublicRoutes />,
     children: [
+      { path: '/', element: <Navigate to='/login' /> },
       { path: 'login', element: <LoginPage /> },
       // { path: 'forgot-password', element: <ForgotPasswordPage /> },
-      { path: '/', element: <Navigate to='/login' /> },
     ],
   },
 
