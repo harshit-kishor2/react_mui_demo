@@ -3,9 +3,10 @@ import { ReactNode } from 'react'
 // material-ui
 import { CssBaseline, StyledEngineProvider } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import ComponentsOverrides from 'themes/overrides'
-import { themeSettings } from 'themes/theme'
-import { useThemeModeContext } from 'contexts/themeContext/ThemeModeProvider'
+
+import { useThemeModeContext } from '@contexts/themeContext/ThemeModeProvider'
+import { themeSettings } from 'src/themes/theme'
+import ComponentsOverrides from 'src/themes/overrides'
 
 interface Props {
   children?: ReactNode

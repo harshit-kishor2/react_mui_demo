@@ -1,2 +1,4 @@
-import Loadable from 'components/Loadable'
-export { Loadable }
+import Loadable from './Loadable'
+import Loader from './Loader'
+
+export { Loadable, Loader }

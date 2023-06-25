@@ -1,7 +1,8 @@
-import useBasepath, { URL_BASE_PATH } from 'hooks/useBasepath'
-import GetAllRoutes from 'navigation'
 import { FC } from 'react'
 import { BrowserRouter } from 'react-router-dom'
+
+import useBasepath, { URL_BASE_PATH } from '@hooks/useBasepath'
+import GetAllRoutes from '@navigations'
 import RootContextProvider from './RootContextProvider'
 import ThemeCustomization from './ThemeCostomization'
 

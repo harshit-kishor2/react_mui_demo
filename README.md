@@ -14,7 +14,10 @@
 4. For form handling
    yarn add react-hook-form
 
-5. Add Extra helper dependency
+5. Add Redux lib
+   yarn add @reduxjs/toolkit react-redux
+
+6. Add Extra helper dependency
    yarn add lodash dayjs
 
 <!-- ==================================================================== -->
@@ -42,5 +45,6 @@ For deployment on github
    Click on the "Save" button
 
 5. yarn build and yarn deploy
-
+6. SPA Issue fixed - https://www.youtube.com/watch?v=fuGu-Ponjf8
+7. https://harshit-kishor2.github.io/react_mui_demo Open given url a nd Done.
 <!-- ==================================================================== -->

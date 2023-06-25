@@ -1,4 +1,4 @@
-import { useAuthContext } from 'contexts/authContext/AuthProvider'
+import { useAuthContext } from '@contexts/authContext/AuthProvider'
 import { Navigate, Outlet } from 'react-router-dom'
 
 type PrivateRouteType = {

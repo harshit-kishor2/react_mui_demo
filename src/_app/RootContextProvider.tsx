@@ -1,5 +1,5 @@
-import { AuthProvider } from 'contexts/authContext/AuthProvider'
-import { ThemeModeProvider } from 'contexts/themeContext/ThemeModeProvider'
+import { AuthProvider } from '@contexts/authContext/AuthProvider'
+import { ThemeModeProvider } from '@contexts/themeContext/ThemeModeProvider'
 import { ReactNode } from 'react'
 
 interface Props {
