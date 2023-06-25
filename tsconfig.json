@@ -22,7 +22,7 @@
       "@helpers/*": ["./src/helpers/*"],
       "@contexts/*": ["./src/contexts/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@navigations": ["./src/navigation/index.tsx"],
+      "@navigations": ["./src/navigation/index"],
       "@screens/*": ["./src/screens/*"],
       "@store/*": ["./src/store/*"],
       "@types": ["./src/types/index"]
