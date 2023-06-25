@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react_mui_demo/static/css/main.e6c13ad2.css",
+    "main.js": "/react_mui_demo/static/js/main.5e64bb75.js",
+    "static/js/369.7b6d64ae.chunk.js": "/react_mui_demo/static/js/369.7b6d64ae.chunk.js",
+    "static/js/659.78056208.chunk.js": "/react_mui_demo/static/js/659.78056208.chunk.js",
+    "static/js/830.3be9f471.chunk.js": "/react_mui_demo/static/js/830.3be9f471.chunk.js",
+    "static/js/372.d1abe44a.chunk.js": "/react_mui_demo/static/js/372.d1abe44a.chunk.js",
+    "static/js/160.34be162d.chunk.js": "/react_mui_demo/static/js/160.34be162d.chunk.js",
+    "static/js/787.a3103ff7.chunk.js": "/react_mui_demo/static/js/787.a3103ff7.chunk.js",
+    "index.html": "/react_mui_demo/index.html",
+    "main.e6c13ad2.css.map": "/react_mui_demo/static/css/main.e6c13ad2.css.map",
+    "main.5e64bb75.js.map": "/react_mui_demo/static/js/main.5e64bb75.js.map",
+    "369.7b6d64ae.chunk.js.map": "/react_mui_demo/static/js/369.7b6d64ae.chunk.js.map",
+    "659.78056208.chunk.js.map": "/react_mui_demo/static/js/659.78056208.chunk.js.map",
+    "830.3be9f471.chunk.js.map": "/react_mui_demo/static/js/830.3be9f471.chunk.js.map",
+    "372.d1abe44a.chunk.js.map": "/react_mui_demo/static/js/372.d1abe44a.chunk.js.map",
+    "160.34be162d.chunk.js.map": "/react_mui_demo/static/js/160.34be162d.chunk.js.map",
+    "787.a3103ff7.chunk.js.map": "/react_mui_demo/static/js/787.a3103ff7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.5e64bb75.js"
+  ]
+}
